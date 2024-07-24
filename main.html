@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kanban Board</title>
+</head>
+<body>
+    <div class="board-container">
+        <div class="board">
+            <div class="column" ondrop="drop(event, 'todo')" ondragover="allowDrop(event)">
+                <h2>To Do</h2>
+                <div id="todo" class="tasks"></div>
+            </div>
+            <div class="column" ondrop="drop(event, 'in-progress')" ondragover="allowDrop(event)">
+                <h2>In Progress</h2>
+                <div id="in-progress" class="tasks"></div>
+            </div>
+            <div class="column" ondrop="drop(event, 'done')" ondragover="allowDrop(event)">
+                <h2>Done</h2>
+                <div id="done" class="tasks"></div>
+            </div>
+        </div>
+        <button onclick="addTask()" class="add-task-button">Add Task</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
